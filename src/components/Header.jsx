@@ -14,7 +14,6 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  // Handle scroll direction
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
