@@ -194,7 +194,7 @@ const Rooms = () => {
             Ready to book your stay?
           </h2>
           <p className="mt-2 text-lg text-white opacity-80">
-            Call us at: <span className="font-montserrat font-bold opacity-80">+63 900 123 4567</span>
+            Call us at: <span className="font-montserrat font-bold opacity-80">+63 977 471 7299</span>
           </p>
           <button onClick={() => {
             navigate('/contact');
