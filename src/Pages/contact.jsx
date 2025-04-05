@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 import { db, collection, addDoc } from '../firebase';
 import emailjs from '@emailjs/browser';
 import introVideo from '../assets/Video1.mp4';
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const BookingForm = () => {
@@ -25,6 +25,12 @@ const BookingForm = () => {
       .min(Yup.ref('checkInDate'), 'Check-out date must be after check-in'),
     message: Yup.string(),
   });
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -216,11 +222,15 @@ const BookingForm = () => {
                     </button>
                   </label>
                 </div>
-
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={handleRecaptchaChange}
+                  className="scale-90 transform origin-left"
+                />
                 {/*Submit Button*/}
                 <button
                   type="submit"
-                  disabled={!isChecked || !isValid}
+                  disabled={!isChecked || !isValid || !recaptchaToken}
                   className={`w-full py-3 rounded-lg text-white font-medium transition ${
                     isChecked && isValid ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-400 cursor-not-allowed'
                   }`}
