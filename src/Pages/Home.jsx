@@ -105,21 +105,33 @@ const Home = () => {
 
       {/* Location */}
       <section id="location" className="py-20 px-4 md:px-16">
-        <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-orangeCustom text-center mb-8">Our Location</h2>
-        <p className='text-orangeCustom'>
-          Coastal Road, Sitio Tektek, Brgy. Sindol, San Felipe, Philippines, 2204
-        </p>
-        <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1926.0670651604707!2d120.0516784610783!3d15.09593450322191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33942d50cd01c553%3A0xf55464a2b63e654b!2sChichi%20Huts%20Resort!5e0!3m2!1sen!2sph!4v1742728194971!5m2!1sen!2sph"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+            <div className="flex flex-col md:flex-row items-stretch gap-8">
+              {/* Left: Map */}
+              <div className="w-full md:w-2/3 h-96 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1926.0670651604707!2d120.0516784610783!3d15.09593450322191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33942d50cd01c553%3A0xf55464a2b63e654b!2sChichi%20Huts%20Resort!5e0!3m2!1sen!2sph!4v1742728194971!5m2!1sen!2sph"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+
+              {/* Right: Heading + Address */}
+              <div className="w-full md:w-1/2 flex flex-col justify-center">
+                <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-orangeCustom mb-4">
+                  Our Location
+                </h2>
+                <p className="text-orangeCustom text-lg leading-relaxed">
+                  📍 Coastal Road, Sitio Tektek, <br />
+                  Brgy. Sindol, San Felipe, <br />
+                  Philippines, 2204
+                </p>
+              </div>
+            </div>
+          </section>
+
 
       {/* Guest Feedback */}
       <section id="feedback" className="py-20 bg-whiteCustom px-4 md:px-16">
