@@ -19,6 +19,7 @@ export default {
         lightcyan: '#e0f7fa',
         floralwhite: '#fffaf0',
         lightbgray: '#f0f4f8',
+        vibrant: '#ebe9e1'
       }
     },
   },

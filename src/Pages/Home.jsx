@@ -93,12 +93,6 @@ const Home = () => {
       {/* Photo Gallery */}
       <section className="py-20 bg-whiteCustom">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-orangeCustom text-center mb-4">
-            Photo Gallery
-          </h2>
-          <p className="text-lg font-montserrat font- text-orangeCustom text-center mb-8">
-            Explore the beauty of ChiChi Huts Resort through our gallery.
-          </p>
           <PhotoGallery />
         </div>
       </section>
