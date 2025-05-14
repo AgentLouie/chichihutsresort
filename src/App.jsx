@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './Pages/Home';
 import Rooms from './Pages/Rooms';
-import Contact from './Pages/Contact';
+import Contact from './pages/Contact';
 import Login from "./Pages/Login";
 import AdminDashboard from "./Pages/AdminDashboard";
 import StaffDashboard from './Pages/StaffDashboard';
